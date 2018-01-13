@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $mod1 Mod1
 
 # VB
 exec --no-startup-id VBoxClient-all 
@@ -155,8 +156,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # move focused workspace between monitors
-bindsym $mod+Ctrl+greater move workspace to output right
-bindsym $mod+Ctrl+less move workspace to output left
+bindsym Ctrl+$mod1+Up       move workspace to output right
+bindsym Ctrl+$mod1+Down     move workspace to output left
+bindsym Ctrl+$mod1+Left     workspace prev 
+bindsym Ctrl+$mod1+Right    workspace next 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
