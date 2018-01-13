@@ -39,8 +39,14 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # Gaps
 gaps inner 25
 gaps outer 0
-smart_borders on
-new_window none
+#smart_borders off
+new_window pixel 3
+client.focused          #C16772 #141021 #FFEEFC #AFDA6E   #C05C47
+client.focused_inactive #4F4858 #141021 #FFEEFC #AFDA6E   #C05C47
+client.unfocused        #9568A1 #141021 #ABBCDA #AFDA6E   #222222
+client.urgent           #AFDA6E #141021 #FFEEFC #AFDA6E   #900000
+client.placeholder      #000000 #141021 #FFEEFC #000000   #0C0C0C
+client.background       #141021
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
