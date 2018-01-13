@@ -17,7 +17,7 @@ exec --no-startup-id VBoxClient-all
 exec --no-startup-id /usr/bin/compton --config ~/.compton.conf
 
 # Wallpaper
-exec --no-startup-id feh --bg-fill ~/.config/.wallpapers/neon_sunset.png
+exec --no-startup-id feh --bg-fill ~/.wallpapers/neon_sunset.png
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
