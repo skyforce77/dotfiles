@@ -220,11 +220,11 @@ menu-2-0-padding-right = 3
 [module/weather]
 type = custom/script
 
-interval = 120
+interval = 1200
 
 format-padding = 2
 
-exec = ~/scripts/weather.py
+exec = ~/.config/scripts/weather.py
 
 
 [module/wireless-network]
