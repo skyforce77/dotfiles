@@ -41,10 +41,12 @@ gaps inner 25
 gaps outer 0
 #smart_borders off
 new_window pixel 3
-client.focused          #C16772 #141021 #FFEEFC #AFDA6E   #C05C47
-client.focused_inactive #4F4858 #141021 #FFEEFC #AFDA6E   #C05C47
-client.unfocused        #9568A1 #141021 #ABBCDA #AFDA6E   #222222
-client.urgent           #AFDA6E #141021 #FFEEFC #AFDA6E   #900000
+
+# windows borders
+client.focused          #C16772 #141021 #FFEEFC #C16772   #C16772
+client.focused_inactive #4F4858 #141021 #FFEEFC #C16772   #C16772
+client.unfocused        #9568A1 #141021 #ABBCDA #9568A1   #9568A1
+client.urgent           #AFDA6E #141021 #FFEEFC #AFDA6E   #AFDA6E
 client.placeholder      #000000 #141021 #FFEEFC #000000   #0C0C0C
 client.background       #141021
 
