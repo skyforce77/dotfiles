@@ -1,5 +1,8 @@
 [global_config]
-  borderless = True
+  title_inactive_bg_color = "#545d67"
+  title_inactive_fg_color = "#ffeefc"
+  title_transmit_bg_color = "#4f4858"
+  title_transmit_fg_color = "#ffeefc"
 [keybindings]
 [layouts]
   [[default]]
@@ -13,12 +16,11 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#222222"
-    background_darkness = 0.9
-    background_type = transparent
-    cursor_color = "#aaaaaa"
+    background_color = "#141021"
+    cursor_color = "#ffeefc"
     font = Source Code Pro Regular 11
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    foreground_color = "#ffeefc"
+    palette = "#4f4858:#c05c47:#428e8e:#e4b226:#4457a3:#903a62:#7aa1dc:#c4b7c5:#545d67:#c16772:#afda6e:#ebcf1a:#4880a5:#9568a1:#abbcda:#ffeefc"
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
