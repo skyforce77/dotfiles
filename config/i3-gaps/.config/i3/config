@@ -14,6 +14,10 @@ set $mod1 Mod1
 
 # VB
 exec --no-startup-id VBoxClient-all 
+
+#LockScreen 
+exec --no-startup-id xautolock -time 10 -locker 'bash ~/.config/scrips/lock.sh'
+
 # Compton
 exec --no-startup-id /usr/bin/compton --config ~/.compton.conf
 
