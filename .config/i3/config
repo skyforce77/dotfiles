@@ -11,6 +11,8 @@
 
 set $mod Mod4
 
+# VB
+exec --no-startup-id VBoxClient-all 
 # Compton
 exec --no-startup-id /usr/bin/compton --config ~/.compton.conf
 

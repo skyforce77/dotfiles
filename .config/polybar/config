@@ -21,12 +21,12 @@ alert = #bd2c40
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 90
+height = 25
 ;offset-x = 1%
 ;offset-y = 5%
 radius = 6.0
 fixed-center = false
-dpi = 192
+dpi = 128
 ;tray-maxsize = 1000
 
 background = ${colors.background}
@@ -46,13 +46,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 5
 
-font-0 = FontAwesome:pixelsize=14;4
-font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
+font-0 = FontAwesome:pixelsize=13;4
+font-1 = Source Code Pro Regular:pixelsize=13;4
+;font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=10;0
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight volume wlan battery date
+modules-right = volume date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -109,7 +110,7 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 3
 
 label-occupied = %index%
 label-occupied-padding = 2
@@ -143,7 +144,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -243,7 +244,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp0s31f6
+interface = enp0s3
 interval = 3.0
 
 format-connected-underline = #55aa55
