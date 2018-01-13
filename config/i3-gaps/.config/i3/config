@@ -125,8 +125,10 @@ set $ws4 "media"
 set $ws5 "mail"
 set $ws6 "misc"
 
-assign [class="^Chromium$"] → $w1
-assign [class="^Firefox$"] → $w1
+# Assign
+for_window [class="Firefox"] move container to workspace 1
+for_window [class="Chromium"] move container to workspace 1
+for_window [class="Terminator"] move container to workspace 2
 
 # switch to workspace
 bindsym $mod+1 workspace 1
