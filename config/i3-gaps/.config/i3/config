@@ -171,6 +171,9 @@ bindsym Ctrl+$mod1+Down     move workspace to output left
 bindsym Ctrl+$mod1+Left     workspace prev 
 bindsym Ctrl+$mod1+Right    workspace next 
 
+# lock screen
+bindsym Ctrl+$mod+l exec --no-startup-id sh ~/.config/scripts/lock.sh
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -211,3 +214,5 @@ bindsym $mod+r mode "resize"
 #	font pango: Source Sans Pro 32px
 #        status_command i3blocks
 #}
+
+exec --no-startup-id i3-msg workspace 1
