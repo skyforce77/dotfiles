@@ -6,12 +6,10 @@ height = 40
 
 background = #141021
 foreground = #c4b7c5
-
 fixed-center = true
 
 font-0 = FontAwesome:pixelsize=13;4
 font-1 = Source Code Pro Regular:pixelsize=13;4
-;font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = Wuncon Siji:pixelsize=10;0
 
 modules-left = i3
@@ -25,9 +23,25 @@ scroll-down = i3wm-wsprev
 [module/i3]
 type = internal/i3
 
+# Icons
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10
+
+# Only show workspaces on the same output
 pin-workspaces = true
-strip-wsnumbers = true
+# 
+strip-wsnumbers = true 
+# Sort by index
 index-sort = true
+
 enable-scroll = false
 
 format = <label-state>
@@ -42,46 +56,40 @@ label-focused-padding = 1
 label-urgent-foreground = #e4b226
 label-urgent-padding = 1
 
+label-visible = %icon%
+label-focused = %icon%
+label-urgent = %icon%
+label-unfocused = %icon%
 
 [module/cpu]
 type = internal/cpu
 
-interval = 1
-
+interval = 2
 format = <label>
 format-padding = 2
-
 label =  %percentage%%
-
 
 [module/memory]
 type = internal/memory
 
 interval = 1
-
 format = <label>
 format-padding = 2
-
-label =  %gb_used% (%percentage_used%%)
-
+label =  %gb_used% (%percentage_used%%)
 
 [module/temperature]
 type = internal/temperature
 
-interval = 1
-
+interval = 10
 thermal-zone = 6
-
 warn-temperature = 80
 
 format = <ramp> <label>
 format-padding = 2
-
 format-warn = <ramp> <label-warn>
 format-warn-padding = 2
 
 label = %temperature%
-
 label-warn = %temperature%
 label-warn-foreground = #e4b226
 
@@ -91,7 +99,6 @@ ramp-2 = 
 ramp-3 = 
 ramp-4 = 
 
-
 [module/date]
 type = internal/date
 
@@ -99,7 +106,6 @@ interval = 1
 
 date = %a %b %d, 
 time = %H:%M:%S
-
 date-alt = %A, %d %B %Y
 time-alt = %H:%M:%S
 
@@ -121,17 +127,13 @@ poll-interval = 5
 
 format-charging = <animation-charging> <label-charging>
 format-charging-padding = 2
-
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-padding = 2
-
 format-full = <ramp-capacity> <label-full>
 format-full-padding = 2
 
 label-charging = %percentage%%
-
 label-discharging = %percentage%%
-
 label-full = %percentage%%
 
 ramp-capacity-0 = 
@@ -172,6 +174,29 @@ click-left = ~/.config/scripts/pavolume.sh --togmute
 scroll-up = ~/.config/scripts/pavolume.sh --up
 scroll-down = ~/.config/scripts/pavolume.sh --down
 
+[module/volume]
+type = internal/volume
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+master-mixer = Master
+# speaker-mixer = Speaker
+# headphone-mixer = Headphone
+# amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e"
+# headphone-id = 9
+
+mapped = true
+format-volume = <ramp-volume> <label-volume>
+label-muted = 
+label-muted-foreground = #66
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+ramp-headphones-0 = 
+ramp-headphones-1 = 
 
 [module/powermenu]
 type = custom/menu
@@ -220,24 +245,17 @@ menu-2-0-padding-right = 3
 [module/weather]
 type = custom/script
 
-interval = 120
-
+interval = 1200
 format-padding = 2
-
-exec = ~/scripts/weather.py
-
+exec = ~/.config/scripts/weather.py
 
 [module/wireless-network]
 type = internal/network
 
 interface = wlo1
-
 format-connected = <label-connected>
 format-connected-padding = 2
-
 format-disconnected = <label-disconnected>
 format-disconnected-padding = 2
-
 label-connected =  %essid%
-
 label-disconnected =  None
