@@ -20,11 +20,14 @@ icons = {
     '50d' : '',
     '50n' : ''
 }
-owm = pyowm.OWM('')
-weather = owm.weather_at_place('Paris,FR').get_weather()
-print("{0} {1:0.1f}°C".format(
-        icons[weather.get_weather_icon_name()],
-        float(weather.get_temperature(unit='celsius')['temp'])
+try:
+    owm = pyowm.OWM('0889e27988b659f5771cd0aabfd7379d')
+    weather = owm.weather_at_place('Paris,FR').get_weather()
+    print("{0} {1:0.1f}°C".format(
+            icons[weather.get_weather_icon_name()],
+            float(weather.get_temperature(unit='celsius')['temp'])
+        )
     )
-)
+except pyowm.exceptions.api_call_error.APICallError:
+    print("X -.--°C")
 
