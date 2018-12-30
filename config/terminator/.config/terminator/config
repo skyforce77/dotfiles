@@ -17,6 +17,8 @@
 [profiles]
   [[default]]
     background_color = "#141021"
+    background_darkness = 0.9
+    background_type = transparent
     cursor_color = "#ffeefc"
     font = Source Code Pro Regular 11
     foreground_color = "#ffeefc"
